@@ -1,0 +1,1918 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Extract, save, and share YouTube captions with one click. CaptionCatch makes it easy to turn videos into text, download transcripts, and capture subtitles instantly.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      
+      <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sora", sans-serif !important;
+}
+
+body, div, p {
+  font-family: "Inter", sans-serif !important;
+}
+</style>
+
+
+      <title>CaptionCatch - Save & Share YouTube Transcripts Instantly</title>
+      <!-- SEO Description -->
+      <meta name="description" content="Extract, save, and share YouTube captions with one click. CaptionCatch makes it easy to turn videos into text, download transcripts, and capture subtitles instantly.">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <style>
+        :root {
+          body {
+            color-scheme: light;
+          }
+        }
+
+      </style>
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      // render the settings object
+      //console.log('settings', [object Object]);
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#4A6CFA',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '#1E293B',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Sora', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Inter', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['Inter', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta name="google-site-verification" content="">
+      <meta name="baidu-verification" content="">
+      <meta name="yandex-verification" content="">
+      <meta name="bing-verification" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="CaptionCatch">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="">
+    
+      
+      <!-- Font Links -->
+     
+      <link rel="icon" type="image/x-icon" href="">
+
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Sora, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <div id="RolloutPageContent"><element id="abac84a6-12b8-4028-8e0d-bbe1a44dabca" data-section-id="abac84a6-12b8-4028-8e0d-bbe1a44dabca">
+
+
+<div id="root">
+  <header id="header" class="bg-neutral-900 text-white py-4">
+    <div class="container mx-auto px-4">
+      <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-white">
+          <a href="#" class="flex items-center">
+            <span class="text-white">Caption</span><span class="text-white">Catch</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-white hover:text-white transition-colors">Home</a>
+          <a href="#features" class="text-white hover:text-white transition-colors">Features</a>
+          <a href="#howItWorks" class="text-white hover:text-white transition-colors">How It Works</a>
+          <a href="#pricing" class="text-white hover:text-white transition-colors">Pricing</a>
+          <a href="#faq" class="text-white hover:text-white transition-colors">FAQ</a>
+          <a href="#cta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">Get Started</a>
+        </div>
+
+        <!-- Mobile Navigation Button -->
+        <button id="mobile-menu-button" class="md:hidden flex items-center" aria-label="Toggle menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2" aria-hidden="true">
+        <div class="flex flex-col space-y-4">
+          <a href="#" class="text-white hover:text-white py-2 transition-colors">Home</a>
+          <a href="#features" class="text-white hover:text-white py-2 transition-colors">Features</a>
+          <a href="#howItWorks" class="text-white hover:text-white py-2 transition-colors">How It Works</a>
+          <a href="#pricing" class="text-white hover:text-white py-2 transition-colors">Pricing</a>
+          <a href="#faq" class="text-white hover:text-white py-2 transition-colors">FAQ</a>
+          <a href="#cta" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg inline-block transition-colors">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.setAttribute('aria-hidden', expanded);
+        
+        // Change hamburger icon to X when menu is open
+        if (!expanded) {
+          mobileMenuButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          `;
+        } else {
+          mobileMenuButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          `;
+        }
+      });
+      
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          mobileMenuButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          `;
+        });
+      });
+    });
+  </script>
+</div>
+
+</element><element id="d430ac89-8980-479a-8595-4352dcd011e3" data-section-id="d430ac89-8980-479a-8595-4352dcd011e3">
+
+
+<div id="root">
+  <section id="hero" class="bg-neutral-900 text-white overflow-hidden relative">
+    <body class="bg-neutral-900 text-white min-h-screen flex flex-col">
+
+
+      <main class="flex-1 w-full px-4 py-12 flex justify-center">
+        <div class="w-full max-w-3xl bg-neutral-800 border border-neutral-700 rounded-2xl shadow-xl p-8">
+          <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-6">YouTube Transcript Tool</h1>
+          <p class="text-center text-gray-400 mb-8">Paste the link of any YouTube video with captions and fetch the transcript instantly.</p>
+  
+          <div class="space-y-4">
+            <input 
+              type="text" 
+              id="youtubeUrl" 
+              placeholder="Enter YouTube URL" 
+              class="w-full px-5 py-3 rounded-lg bg-neutral-700 text-white placeholder-gray-400 border border-neutral-600 focus:outline-none focus:ring-2 focus:ring-primary-500 transition"
+            />
+  
+            <button 
+              onclick="fetchTranscript()" 
+              class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 rounded-lg transition duration-300">
+              Get Transcript
+            </button>
+          </div>
+  
+          <div id="buttons" class="mt-6 flex flex-wrap gap-3 justify-center">
+            <button onclick="download('pdf')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition">PDF</button>
+            <button onclick="download('docx')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg transition">DOCX</button>
+            <button onclick="download('txt')" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition">TXT</button>
+            <button onclick="copyToClipboard()" class="bg-neutral-600 hover:bg-neutral-500 text-white px-4 py-2 rounded-lg transition">Copy</button>
+          </div>
+  
+          <div 
+            id="transcript"
+            class="mt-8 bg-neutral-900 border border-neutral-700 rounded-xl p-4 h-80 overflow-y-scroll whitespace-pre-wrap leading-relaxed text-sm text-gray-300 shadow-inner">
+          </div>
+        </div>
+      </main>
+      <!-- Include jsPDF from CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+      <script type="module">
+        import * as docx from 'https://cdn.jsdelivr.net/npm/docx@8.0.2/+esm';
+  
+        window.fetchTranscript = async function () {
+          const url = document.getElementById('youtubeUrl').value;
+          const response = await fetch('/get_transcript', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url })
+          });
+          const data = await response.json();
+          document.getElementById('transcript').innerText = data.transcript || data.error;
+        };
+  
+        window.copyToClipboard = function () {
+          const text = document.getElementById('transcript').innerText;
+          navigator.clipboard.writeText(text).then(() => alert('Transcript copied to clipboard!'));
+        };
+        
+        window.download = async function (type) {
+          const text = document.getElementById('transcript').innerText;
+  
+          if (type === 'pdf') {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const margin = 10;
+            const pageWidth = doc.internal.pageSize.getWidth() - 2 * margin;
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const lineHeight = 7;
+            const startY = 20;
+  
+            const lines = doc.splitTextToSize(text, pageWidth);
+            let currentY = startY;
+  
+            lines.forEach((line) => {
+              if (currentY + lineHeight > pageHeight - margin) {
+                doc.addPage();
+                currentY = startY;
+              }
+              doc.text(line, margin, currentY);
+              currentY += lineHeight;
+            });
+  
+            doc.save('transcript.pdf');
+
+          } else if (type === 'txt') {
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'transcript.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          } else if (type === 'docx') {
+            const { Document, Packer, Paragraph, TextRun } = docx;
+            const lines = text.split(/\n|\r/).filter(line => line.trim() !== '');
+            const paragraphs = lines.map(line => new Paragraph({ children: [new TextRun({ text: line, font: "Arial", size: 24 })] }));
+  
+            const doc = new Document({ sections: [{ properties: {}, children: paragraphs }] });
+            const blob = await Packer.toBlob(doc);
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "transcript.docx";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          }
+        };
+  
+        document.addEventListener('DOMContentLoaded', function () {
+          const mobileMenuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+  
+          mobileMenuButton.addEventListener('click', function () {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.setAttribute('aria-hidden', expanded);
+  
+            mobileMenuButton.innerHTML = !expanded
+              ? `<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12' /></svg>`
+              : `<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16' /></svg>`;
+          });
+        });
+      </script>
+    </body>
+    <!-- Gradient background effect -->
+    <!-- <div class="absolute inset-0 bg-gradient-to-r from-primary-900/20 to-accent-900/20 opacity-50"></div> -->
+    
+    <!-- Stats section at bottom -->
+    <div class="container mx-auto px-4 py-8 border-t border-neutral-800 mt-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-3xl md:text-4xl font-bold text-white">10M+</p>
+          <p class="text-gray-400">Transcripts Generated</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold text-white">2M+</p>
+          <p class="text-gray-400">Happy Users</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold text-white">99.9%</p>
+          <p class="text-gray-400">Accuracy</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold text-white">5s</p>
+          <p class="text-gray-400">Average Processing Time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="8485afa0-e822-426c-87b7-424162e00b4d" data-section-id="8485afa0-e822-426c-87b7-424162e00b4d">
+
+
+<div id="root">
+  <section id="features" class="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-neutral-900 dark:text-white">Powerful Features</h2>
+        <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">Extract, save, and share YouTube captions with our intuitive tools designed for maximum efficiency.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-indigo-100 dark:bg-indigo-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">One-Click Extraction</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Instantly extract YouTube transcripts with a single click. No complicated steps or waiting.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-rose-100 dark:bg-rose-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">Multiple Format Export</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Save transcripts in TXT, PDF, or SRT formats. Perfect for different use cases and platforms.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-amber-100 dark:bg-amber-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">Privacy Protected</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Your data stays with you. We don't store any transcripts or YouTube history on our servers.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-emerald-100 dark:bg-emerald-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">Quick Sharing</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Share transcripts directly to social media or copy to clipboard with a single click.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-blue-100 dark:bg-blue-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">Search & Highlight</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Find specific parts of the transcript with our intelligent search and highlighting tools.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="bg-purple-100 dark:bg-purple-900/30 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-neutral-900 dark:text-white">Cross-Device Access</h3>
+          <p class="text-neutral-600 dark:text-neutral-300">Access your saved transcripts from any device with our cloud synchronization feature.</p>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <a href="#try-now" class="inline-flex items-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+          Try CaptionCatch Now
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="98e214b9-df5b-4e3e-9095-dec3d5f81541" data-section-id="98e214b9-df5b-4e3e-9095-dec3d5f81541">
+
+
+<div id="root">
+  <section id="howItWorks" class="py-16 md:py-24 bg-white dark:bg-neutral-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-neutral-900 dark:text-white">How It Works</h2>
+        <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">Extract YouTube captions in seconds with our simple three-step process.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="space-y-12">
+            <!-- Step 1 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 bg-indigo-100 dark:bg-indigo-900/30 rounded-full w-12 h-12 flex items-center justify-center">
+                <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-neutral-900 dark:text-white">Copy the YouTube URL</h3>
+                <p class="text-neutral-600 dark:text-neutral-400">Simply copy the URL of any YouTube video that has captions available. Works with any public video on YouTube.</p>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 bg-indigo-100 dark:bg-indigo-900/30 rounded-full w-12 h-12 flex items-center justify-center">
+                <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-neutral-900 dark:text-white">Paste & Extract Captions</h3>
+                <p class="text-neutral-600 dark:text-neutral-400">Paste the URL into CaptionCatch and click "Extract". Our tool instantly fetches all available captions in seconds.</p>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 bg-indigo-100 dark:bg-indigo-900/30 rounded-full w-12 h-12 flex items-center justify-center">
+                <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2 text-neutral-900 dark:text-white">Save & Share</h3>
+                <p class="text-neutral-600 dark:text-neutral-400">Download the transcript in your preferred format or share it directly. Copy, edit, or save for later use.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-10">
+            <a href="#try-now" class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+              Try It Now
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="order-1 lg:order-2 relative">
+          <div class="relative rounded-xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8aG93aXR3b3JrcyUyMHByb2Zlc3Npb25hbHxlbnwwfDB8fHwxNzQzMTY3MzcwfDA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+              alt="Woman using CaptionCatch to extract YouTube captions"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400'"
+              width="5760"
+              height="3840"
+              class="w-full h-full object-cover rounded-xl"
+            >
+            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent rounded-xl"></div>
+          </div>
+          
+          <!-- Floating Elements -->
+          <div class="absolute -top-4 -right-4 bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 max-w-xs hidden md:block">
+            <div class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-medium text-neutral-900 dark:text-white">Captions extracted successfully!</span>
+            </div>
+          </div>
+          
+          <div class="absolute -bottom-4 -left-4 bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-4 max-w-xs hidden md:block">
+            <div class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-sm font-medium text-neutral-900 dark:text-white">1-click download in multiple formats</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Attribution -->
+      <div class="text-center mt-8 text-xs text-neutral-500 dark:text-neutral-400">
+        Photo by <a href="https://unsplash.com/@brookelark" target="_blank" rel="noopener noreferrer" class="underline hover:text-indigo-600 dark:hover:text-indigo-400">Brooke Lark</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="d016ddd1-8d18-4d22-b944-333f260cf6c4" data-section-id="d016ddd1-8d18-4d22-b944-333f260cf6c4">
+
+
+<div id="root">
+  <section id="benefits" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-neutral-900 dark:to-neutral-800">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Section heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Why Choose CaptionCatch?</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Transform how you interact with YouTube content with our powerful caption extraction features</p>
+      </div>
+
+      <!-- Benefits grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <!-- Benefit 1 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Instant Caption Extraction</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">Extract captions from any YouTube video with just one click, saving you time and effort.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Easy Sharing</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">Share transcripts instantly with colleagues, classmates, or friends through multiple platforms.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Secure Storage</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">All your transcripts are securely stored in your account for easy access anytime, anywhere.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Multiple Format Support</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">Download transcripts in TXT, PDF, or SRT formats to fit your specific needs.</p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Searchable Content</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">Easily search through your transcripts to find specific information or quotes in seconds.</p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 md:p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mb-6 mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white text-center mb-3">Time-Stamped Transcripts</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">Get precision with time-stamped transcripts that match the exact timing of the video content.</p>
+        </div>
+      </div>
+
+      <!-- Testimonial/Social Proof -->
+      <div class="mt-20 max-w-4xl mx-auto bg-white dark:bg-neutral-800 rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/3">
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8YmVuZWZpdHMlMjBwcm9mZXNzaW9uYWx8ZW58MHwwfHx8MTc0MzE2MDA3N3ww&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+              alt="man sitting on chair wearing gray crew-neck long-sleeved shirt using Apple Magic Keyboard"
+              onerror="this.onerror=null; this.src='https://placehold.co/400x400'"
+              class="w-full h-full object-cover object-center"
+            >
+          </div>
+          <div class="p-8 md:w-2/3">
+            <div class="flex items-center mb-4">
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"CaptionCatch has revolutionized how I create content. Being able to instantly extract transcripts from YouTube videos has cut my research time in half and made creating citations so much easier."</p>
+            <div>
+              <h4 class="font-bold text-gray-900 dark:text-white">Alex Williams</h4>
+              <p class="text-gray-500 dark:text-gray-400">Content Creator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+          Try CaptionCatch For Free
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="dbe7cf28-1287-4b19-960b-898614465d3b" data-section-id="dbe7cf28-1287-4b19-960b-898614465d3b">
+
+
+<div id="root">
+  <section id="testimonials" class="py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-neutral-900 dark:to-neutral-800">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Testimonials</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">See what our users are saying about CaptionCatch</p>
+      </div>
+      
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 relative transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-indigo-600 rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          
+          <div class="pt-4">
+            <div class="flex items-center mb-4">
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"CaptionCatch has been a game-changer for my research. I can instantly extract captions from any YouTube video and reference them in my papers."</p>
+            
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-800 flex items-center justify-center mr-4">
+                <span class="text-indigo-700 dark:text-indigo-200 font-bold text-lg">SK</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Sarah Kim</h4>
+                <p class="text-gray-500 dark:text-gray-400">Graduate Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 relative transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-purple-600 rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          
+          <div class="pt-4">
+            <div class="flex items-center mb-4">
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"As a content creator, CaptionCatch saves me hours of transcription work. I download captions from tutorials and turn them into blog content instantly."</p>
+            
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-800 flex items-center justify-center mr-4">
+                <span class="text-purple-700 dark:text-purple-200 font-bold text-lg">JR</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 dark:text-white">James Rodriguez</h4>
+                <p class="text-gray-500 dark:text-gray-400">Digital Creator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-8 relative transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-600 rounded-full p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </div>
+          
+          <div class="pt-4">
+            <div class="flex items-center mb-4">
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"The time-stamped transcripts feature is incredible. I use it to quickly find key points in long lectures without rewatching entire videos."</p>
+            
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center mr-4">
+                <span class="text-blue-700 dark:text-blue-200 font-bold text-lg">AP</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 dark:text-white">Aisha Patel</h4>
+                <p class="text-gray-500 dark:text-gray-400">Online Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Featured Testimonial with Image -->
+      <div class="mt-16 bg-white dark:bg-neutral-800 rounded-xl shadow-xl overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 p-8 md:p-12">
+            <div class="flex items-center mb-4">
+              <svg class="text-yellow-400 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="text-yellow-400 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 text-lg mb-8 italic">
+              "As a language learning coach, CaptionCatch has been an essential tool in my workflow. I can easily extract captions from YouTube videos in multiple languages and share them with my students. The one-click transcript tool saves me hours every week!"
+            </p>
+            
+            <div class="flex items-center">
+              <div class="mr-4">
+                <h4 class="font-bold text-gray-900 dark:text-white text-xl">Michael Chen</h4>
+                <p class="text-indigo-600 dark:text-indigo-400">Language Coach & Educator</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img 
+              src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="a woman sitting on a bed" 
+              onerror="this.onerror=null; this.src='https://placehold.co/400x400'" 
+              class="w-full h-full object-cover"
+            >
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial Stats -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <p class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400">10K+</p>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Active Users</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400">98%</p>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Satisfaction Rate</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400">1M+</p>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Transcripts Extracted</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400">4.9</p>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Average Rating</p>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="mt-16 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to try CaptionCatch?</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied users who save time and boost productivity with our transcript tool.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+          Start For Free
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="81f11825-e03a-40e6-a971-16ce42b9906b" data-section-id="81f11825-e03a-40e6-a971-16ce42b9906b">
+
+
+<div id="root">
+  <section id="pricing" class="py-16 md:py-24 bg-gradient-to-b from-white to-indigo-50 dark:from-neutral-900 dark:to-neutral-800">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Pricing</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Choose the perfect plan for your caption extraction needs</p>
+      </div>
+
+      <!-- Toggle monthly/yearly pricing -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex items-center bg-gray-100 dark:bg-neutral-700 rounded-full p-1">
+          <button id="monthlyToggle" class="px-4 py-2 rounded-full bg-indigo-600 text-white font-medium transition">Monthly</button>
+          <button id="yearlyToggle" class="px-4 py-2 rounded-full text-gray-700 dark:text-gray-300 font-medium transition">Yearly (Save 20%)</button>
+        </div>
+      </div>
+
+      <!-- Pricing cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Free plan -->
+        <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Free</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-5xl font-extrabold text-gray-900 dark:text-white" data-monthly="$0" data-yearly="$0">$0</span>
+              <span class="text-gray-500 dark:text-gray-400 ml-1" data-monthly="/month" data-yearly="/year">/month</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">Perfect for casual users who need occasional transcript access.</p>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">10 transcripts per month</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Basic text extraction</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Email support</span>
+              </li>
+              <li class="flex items-center text-gray-400">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <span>Timestamped transcripts</span>
+              </li>
+            </ul>
+          </div>
+          <div class="px-8 pb-8">
+            <a href="#" class="block w-full py-3 px-6 text-center bg-gray-100 hover:bg-gray-200 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-gray-800 dark:text-white font-medium rounded-lg transition">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Pro plan -->
+        <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 border-2 border-indigo-600 relative">
+          <div class="absolute top-0 right-0 bg-indigo-600 text-white py-1 px-4 rounded-bl-lg font-medium">Popular</div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Pro</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-5xl font-extrabold text-indigo-600" data-monthly="$12" data-yearly="$9.60">$12</span>
+              <span class="text-gray-500 dark:text-gray-400 ml-1" data-monthly="/month" data-yearly="/year">/month</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">Great for content creators and researchers who need regular captions.</p>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Unlimited transcripts</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Timestamped transcripts</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Multiple export formats</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Priority support</span>
+              </li>
+            </ul>
+          </div>
+          <div class="px-8 pb-8">
+            <a href="#" class="block w-full py-3 px-6 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Business plan -->
+        <div class="bg-white dark:bg-neutral-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Business</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-5xl font-extrabold text-gray-900 dark:text-white" data-monthly="$29" data-yearly="$23.20">$29</span>
+              <span class="text-gray-500 dark:text-gray-400 ml-1" data-monthly="/month" data-yearly="/year">/month</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">Ideal for teams and businesses with advanced needs.</p>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Everything in Pro</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Team collaboration</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">API access</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-600 dark:text-gray-300">Dedicated account manager</span>
+              </li>
+            </ul>
+          </div>
+          <div class="px-8 pb-8">
+            <a href="#" class="block w-full py-3 px-6 text-center bg-gray-900 hover:bg-black dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white font-medium rounded-lg transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise section -->
+      <div class="mt-20">
+        <div class="bg-indigo-600 dark:bg-indigo-800 rounded-2xl overflow-hidden shadow-xl">
+          <div class="md:flex">
+            <div class="md:w-3/5 p-8 md:p-12">
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Enterprise</h3>
+              <p class="text-indigo-100 text-lg mb-6">Need a custom solution for your organization?</p>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-white">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Customized integration solutions</span>
+                </li>
+                <li class="flex items-center text-white">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Service level agreements (SLAs)</span>
+                </li>
+                <li class="flex items-center text-white">
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Custom features and development</span>
+                </li>
+              </ul>
+              <a href="#" class="inline-block py-3 px-8 bg-white text-indigo-600 font-medium rounded-lg hover:bg-opacity-90 transition">Contact Sales</a>
+            </div>
+            <div class="md:w-2/5 hidden md:block">
+              <img 
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8cHJpY2luZyUyMHBsYW5zJTIwcHJvZmVzc2lvbmFsJTIwYnVzaW5lc3N8ZW58MHwwfHx8MTc0MzE2MDk2MHww&ixlib=rb-4.0.3&q=80&w=1080?q=80" 
+                alt="person holding pencil near laptop computer" 
+                onerror="this.onerror=null; this.src='https://placehold.co/500x300'" 
+                class="w-full h-full object-cover"
+              >
+              <div class="text-xs text-center text-indigo-100 py-1">Photo by Scott Graham</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ section -->
+      <div class="mt-20">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">Frequently Asked Questions</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md">
+            <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Can I switch plans anytime?</h4>
+            <p class="text-gray-600 dark:text-gray-300">Yes, you can upgrade, downgrade or cancel your plan at any time. Changes will take effect at the end of your billing cycle.</p>
+          </div>
+          
+          <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md">
+            <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Do you offer refunds?</h4>
+            <p class="text-gray-600 dark:text-gray-300">We offer a 7-day money-back guarantee for all paid plans. If you're not satisfied, contact us within 7 days of purchase.</p>
+          </div>
+          
+          <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md">
+            <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">What payment methods do you accept?</h4>
+            <p class="text-gray-600 dark:text-gray-300">We accept all major credit cards, PayPal, and for Business plans, we can also accept bank transfers.</p>
+          </div>
+          
+          <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md">
+            <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Can I try before I buy?</h4>
+            <p class="text-gray-600 dark:text-gray-300">Absolutely! You can start with our Free plan to test most features, then upgrade when you're ready for more capabilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA section -->
+      <div class="mt-20 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to start extracting captions?</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of content creators, researchers, and businesses who use CaptionCatch to save time and boost productivity.</p>
+        <a href="#" class="inline-block py-3 px-8 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">Get Started For Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for pricing toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const monthlyToggle = document.getElementById('monthlyToggle');
+      const yearlyToggle = document.getElementById('yearlyToggle');
+      const monthlyPrices = document.querySelectorAll('[data-monthly]');
+      const yearlyLabels = document.querySelectorAll('[data-yearly]');
+      
+      function setMonthlyPricing() {
+        monthlyToggle.classList.add('bg-indigo-600', 'text-white');
+        monthlyToggle.classList.remove('text-gray-700', 'dark:text-gray-300');
+        yearlyToggle.classList.remove('bg-indigo-600', 'text-white');
+        yearlyToggle.classList.add('text-gray-700', 'dark:text-gray-300');
+        
+        monthlyPrices.forEach(el => {
+          el.textContent = el.getAttribute('data-monthly');
+        });
+        
+        yearlyLabels.forEach(el => {
+          el.textContent = el.getAttribute('data-monthly');
+        });
+      }
+      
+      function setYearlyPricing() {
+        yearlyToggle.classList.add('bg-indigo-600', 'text-white');
+        yearlyToggle.classList.remove('text-gray-700', 'dark:text-gray-300');
+        monthlyToggle.classList.remove('bg-indigo-600', 'text-white');
+        monthlyToggle.classList.add('text-gray-700', 'dark:text-gray-300');
+        
+        monthlyPrices.forEach(el => {
+          el.textContent = el.getAttribute('data-yearly');
+        });
+        
+        yearlyLabels.forEach(el => {
+          el.textContent = el.getAttribute('data-yearly');
+        });
+      }
+      
+      monthlyToggle.addEventListener('click', setMonthlyPricing);
+      yearlyToggle.addEventListener('click', setYearlyPricing);
+    });
+  </script>
+</div>
+
+</element><element id="c78ee6c2-838d-40b9-9b87-4cd92996c48b" data-section-id="c78ee6c2-838d-40b9-9b87-4cd92996c48b">
+
+
+<div id="root">
+  <section id="faq" class="bg-neutral-50 py-16 md:py-24">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-neutral-600 text-lg">Everything you need to know about CaptionCatch and how it can help you capture YouTube subtitles fast.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8ZmFxJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3NDMxNjAzNTJ8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+            alt="person standing near the stairs"
+            onerror="this.onerror=null; this.src='https://placehold.co/600x400'"
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Expert Support</h3>
+            <p class="text-neutral-600">Our team is ready to help with any questions about extracting YouTube captions. We're here to ensure you get the most out of CaptionCatch.</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1484981138541-3d074aa97716?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8ZmFxJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3NDMxNjAzNTJ8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+            alt="woman holding white mug while standing"
+            onerror="this.onerror=null; this.src='https://placehold.co/600x400'"
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">Easy Solutions</h3>
+            <p class="text-neutral-600">We've designed CaptionCatch to make getting YouTube transcripts simple. One click is all it takes to turn videos into text easily.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-6">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-lg shadow-md p-6" x-data="{ open: false }">
+            <button 
+              class="flex justify-between items-center w-full text-left focus:outline-none" 
+              @click="open = !open"
+              aria-expanded="false"
+            >
+              <h3 class="text-lg font-semibold text-neutral-900">How do I extract captions with CaptionCatch?</h3>
+              <svg class="w-5 h-5 text-neutral-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mt-3 text-neutral-600 hidden">
+              <p>Simply paste your YouTube video URL into CaptionCatch, and click the "Extract Captions" button. Our tool instantly processes the video and provides you with a complete transcript that you can copy, download, or share with a single click.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-lg shadow-md p-6" x-data="{ open: false }">
+            <button 
+              class="flex justify-between items-center w-full text-left focus:outline-none" 
+              @click="open = !open"
+              aria-expanded="false"
+            >
+              <h3 class="text-lg font-semibold text-neutral-900">Does CaptionCatch work with any YouTube video?</h3>
+              <svg class="w-5 h-5 text-neutral-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mt-3 text-neutral-600 hidden">
+              <p>CaptionCatch works with any YouTube video that has captions or subtitles available. This includes both auto-generated captions and manually added subtitles. If a video doesn't have captions, our tool cannot extract what isn't there.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-lg shadow-md p-6" x-data="{ open: false }">
+            <button 
+              class="flex justify-between items-center w-full text-left focus:outline-none" 
+              @click="open = !open"
+              aria-expanded="false"
+            >
+              <h3 class="text-lg font-semibold text-neutral-900">What formats can I download the transcripts in?</h3>
+              <svg class="w-5 h-5 text-neutral-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mt-3 text-neutral-600 hidden">
+              <p>CaptionCatch allows you to download transcripts in multiple formats including TXT, SRT, and PDF. You can also copy the text directly to your clipboard for immediate use in your projects or documents.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-lg shadow-md p-6" x-data="{ open: false }">
+            <button 
+              class="flex justify-between items-center w-full text-left focus:outline-none" 
+              @click="open = !open"
+              aria-expanded="false"
+            >
+              <h3 class="text-lg font-semibold text-neutral-900">Is CaptionCatch free to use?</h3>
+              <svg class="w-5 h-5 text-neutral-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mt-3 text-neutral-600 hidden">
+              <p>We offer both free and premium plans. The free version allows you to extract a limited number of transcripts per day. Our premium plans provide unlimited extractions, advanced formatting options, and priority support for power users.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="bg-white rounded-lg shadow-md p-6" x-data="{ open: false }">
+            <button 
+              class="flex justify-between items-center w-full text-left focus:outline-none" 
+              @click="open = !open"
+              aria-expanded="false"
+            >
+              <h3 class="text-lg font-semibold text-neutral-900">Can I extract captions in languages other than English?</h3>
+              <svg class="w-5 h-5 text-neutral-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mt-3 text-neutral-600 hidden">
+              <p>Yes! CaptionCatch supports all languages that YouTube captions are available in. You can extract captions in the original language of the video or choose from available translations if the video creator has enabled them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-neutral-600 mb-6">Still have questions about our one-click YouTube transcript tool?</p>
+        <a href="#contact" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Contact Our Support Team</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // AlpineJS-like functionality for the FAQ accordion
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqButtons = document.querySelectorAll('#faq button');
+      
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('svg');
+          
+          // Toggle content visibility
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            this.setAttribute('aria-expanded', 'true');
+            icon.classList.add('rotate-180');
+          } else {
+            content.classList.add('hidden');
+            this.setAttribute('aria-expanded', 'false');
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+    });
+  </script>
+</div>
+
+</element><element id="8d698d5f-4c1e-4ff2-9e86-a064c150c324" data-section-id="8d698d5f-4c1e-4ff2-9e86-a064c150c324">
+
+
+<div id="root">
+  <section id="cta" class="relative py-20 overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-700"></div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-white"></div>
+      <div class="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-white"></div>
+      <div class="absolute top-1/2 left-1/3 w-24 h-24 rounded-full bg-white"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 md:px-8 relative z-10">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Left Content -->
+        <div class="text-white">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Turn Videos Into Text With One Click</h2>
+          <p class="text-lg md:text-xl opacity-90 mb-8">Extract, save, and share YouTube captions instantly. Save hours of manual transcription with our powerful tool.</p>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="ml-3">Download in multiple formats (TXT, SRT, PDF)</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="ml-3">Supports multiple languages</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="ml-3">Time-stamped transcripts available</span>
+            </li>
+          </ul>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#pricing" class="bg-white text-indigo-700 font-semibold rounded-lg py-3 px-6 text-center hover:bg-gray-100 transition duration-300 shadow-md">
+              Get Started Free
+            </a>
+            <a href="#demo" class="border-2 border-white text-white font-semibold rounded-lg py-3 px-6 text-center hover:bg-white hover:bg-opacity-10 transition duration-300">
+              Watch Demo
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Content - Image -->
+        <div class="relative rounded-xl overflow-hidden shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1425421669292-0c3da3b8f529?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8Y3RhJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3NDMxNjIwNzV8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+            alt="A man in a black suit loosening his tie"
+            onerror="this.onerror=null; this.src='https://placehold.co/600x400'"
+            class="w-full h-full object-cover"
+          >
+          <!-- Overlay with caption -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+          <div class="absolute bottom-0 left-0 w-full p-6">
+            <p class="text-white text-lg font-medium">Save time and increase productivity with CaptionCatch</p>
+            <p class="text-white text-opacity-80 text-sm mt-2">Photo by Ben Rosett</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonial -->
+      <div class="mt-16 bg-white bg-opacity-10 rounded-xl p-6 md:p-8 backdrop-blur-sm">
+        <div class="flex flex-col md:flex-row md:items-center gap-6">
+          <div class="flex-shrink-0">
+            <img 
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8Y3RhJTIwcHJvZmVzc2lvbmFsfGVufDB8MHx8fDE3NDMxNjIwNzV8MA&ixlib=rb-4.0.3&q=80&w=1080?q=80"
+              alt="person standing near the stairs"
+              onerror="this.onerror=null; this.src='https://placehold.co/100x100'"
+              class="w-20 h-20 rounded-full object-cover border-4 border-white"
+            >
+          </div>
+          <div>
+            <p class="text-white text-lg italic mb-4">"CaptionCatch has completely transformed how I work with YouTube content. The time I save by instantly extracting captions allows me to focus on creating more value for my audience."</p>
+            <div class="flex items-center">
+              <p class="text-white font-semibold">Michael Anderson</p>
+              <span class="mx-2 text-white text-opacity-50">•</span>
+              <p class="text-white text-opacity-80">Content Creator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Modal -->
+  <div id="newsletter-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+    <!-- Backdrop -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity" id="modal-backdrop"></div>
+    
+    <!-- Modal Content -->
+    <div class="bg-white rounded-xl shadow-2xl w-full max-w-md mx-4 relative z-10 transform transition-all opacity-0 scale-95" id="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <!-- Close Button -->
+      <button id="modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-500 focus:outline-none" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      
+      <!-- Content -->
+      <div class="p-6">
+        <h3 id="modal-title" class="text-2xl font-bold text-gray-900 mb-4">Get Early Access</h3>
+        <p class="text-gray-600 mb-6">Sign up for our newsletter to be the first to know when we launch new features and receive exclusive discounts.</p>
+        
+        <form id="newsletter-form" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="you@example.com" required>
+          </div>
+          
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+            Subscribe Now
+          </button>
+        </form>
+        
+        <p class="text-sm text-gray-500 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('newsletter-modal');
+      const modalContent = document.getElementById('modal-content');
+      const modalBackdrop = document.getElementById('modal-backdrop');
+      const closeButton = document.getElementById('modal-close');
+      
+      // Variables to store the trigger element and body's original style
+      let triggerElement = null;
+      let bodyOriginalStyle = '';
+      
+      // Show modal function
+      function showModal(trigger) {
+        // Store the trigger element and body's original style
+        triggerElement = trigger;
+        bodyOriginalStyle = document.body.style.overflow;
+        
+        // Show modal and prevent body scrolling
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // Animate in
+        setTimeout(() => {
+          modalContent.classList.remove('opacity-0', 'scale-95');
+          modalContent.classList.add('opacity-100', 'scale-100');
+        }, 10);
+        
+        // Set ARIA attributes
+        modalContent.setAttribute('aria-hidden', 'false');
+        
+        // Focus the first focusable element inside the modal
+        const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusableElements.length > 0) {
+          focusableElements[0].focus();
+        }
+      }
+      
+      // Hide modal function
+      function hideModal() {
+        // Animate out
+        modalContent.classList.remove('opacity-100', 'scale-100');
+        modalContent.classList.add('opacity-0', 'scale-95');
+        
+        // Hide modal and restore body scrolling after animation
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = bodyOriginalStyle;
+          
+          // Set ARIA attributes
+          modalContent.setAttribute('aria-hidden', 'true');
+          
+          // Return focus to the trigger element
+          if (triggerElement) {
+            triggerElement.focus();
+          }
+        }, 300);
+      }
+      
+      // Event listeners for opening the modal
+      const ctaButtons = document.querySelectorAll('#cta a');
+      ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          if (Math.random() > 0.5) { // Randomly show for demo purposes
+            e.preventDefault();
+            showModal(this);
+          }
+        });
+      });
+      
+      // Event listeners for closing the modal
+      closeButton.addEventListener('click', hideModal);
+      modalBackdrop.addEventListener('click', hideModal);
+      
+      // Close on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          hideModal();
+        }
+      });
+      
+      // Trap focus within modal
+      modal.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab' && !modal.classList.contains('hidden')) {
+          const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+          
+          // If shift+tab on first element, go to last element
+          if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+          // If tab on last element, go to first element
+          else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      });
+      
+      // Form submission handling
+      const newsletterForm = document.getElementById('newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          // Here you would typically send the form data to your server
+          
+          // Show success message
+          const email = document.getElementById('email').value;
+          newsletterForm.innerHTML = `
+            <div class="text-center">
+              <svg class="w-16 h-16 mx-auto text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h4 class="text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
+              <p class="text-gray-600">We've sent a confirmation email to <span class="font-medium">${email}</span>.</p>
+            </div>
+          `;
+          
+          // Close modal after a delay
+          setTimeout(hideModal, 3000);
+        });
+      }
+    });
+  </script>
+</div>
+
+</element><element id="75f3ab48-76c3-4821-9a2d-a40183db21c3" data-section-id="75f3ab48-76c3-4821-9a2d-a40183db21c3">
+
+
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <!-- Footer Top Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <!-- Brand Column -->
+        <div class="col-span-1 lg:col-span-1">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-white mb-2">CaptionCatch</h2>
+            <p class="text-neutral-400">Turn Videos Into Text Easily</p>
+          </div>
+          <p class="text-neutral-300 mb-6">The fastest way to extract, save, and share YouTube transcripts in just one click.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">
+              <span class="sr-only">YouTube</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links Column -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-neutral-400 hover:text-white transition-colors duration-300">Home</a></li>
+            <li><a href="#features" class="text-neutral-400 hover:text-white transition-colors duration-300">Features</a></li>
+            <li><a href="#how-it-works" class="text-neutral-400 hover:text-white transition-colors duration-300">How It Works</a></li>
+            <li><a href="#pricing" class="text-neutral-400 hover:text-white transition-colors duration-300">Pricing</a></li>
+            <li><a href="#faq" class="text-neutral-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+            <li><a href="#blog" class="text-neutral-400 hover:text-white transition-colors duration-300">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal Column -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">Cookie Policy</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">GDPR Compliance</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Column -->
+        <div class="col-span-1 lg:col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-white">Stay Updated</h3>
+          <p class="text-neutral-400 mb-4">Subscribe to get the latest news and offers.</p>
+          
+          <form id="newsletter-form" class="mb-4">
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                class="bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-2 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 flex-grow"
+                required
+              >
+              <button 
+                type="submit" 
+                class="bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg px-4 py-2 transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+          
+          <p class="text-neutral-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to receive updates.</p>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-neutral-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-neutral-400 text-sm mb-4 md:mb-0">&copy; 2023 CaptionCatch. All rights reserved.</p>
+          
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors duration-300">Sitemap</a>
+            <span class="text-neutral-700">•</span>
+            <a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors duration-300">Careers</a>
+            <span class="text-neutral-700">•</span>
+            <a href="#" class="text-neutral-400 hover:text-white text-sm transition-colors duration-300">Contact</a>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 focus:outline-none hover:bg-indigo-700" aria-label="Back to top">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </button>
+  </footer>
+
+  <!-- Newsletter subscription success modal -->
+  <div id="newsletter-success-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden" aria-modal="true" aria-hidden="true">
+    <!-- Backdrop -->
+    <div id="newsletter-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity"></div>
+    
+    <!-- Modal Content -->
+    <div id="newsletter-modal-content" class="relative bg-white rounded-xl max-w-md w-full mx-4 p-6 shadow-xl transform transition-all opacity-0 scale-95">
+      <!-- Close button -->
+      <button id="newsletter-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-500 focus:outline-none" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      
+      <div class="text-center">
+        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">You're on the list!</h3>
+        <p class="text-gray-600 mb-6">Thank you for subscribing to our newsletter. You'll be the first to know about new features and updates.</p>
+        <button id="newsletter-modal-ok" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg px-5 py-2.5 transition duration-300">
+          Got it
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Back to top button functionality
+      const backToTopButton = document.getElementById('back-to-top');
+      
+      // Show back to top button when scrolled down
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove('opacity-0', 'invisible');
+          backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopButton.classList.remove('opacity-100', 'visible');
+          backToTopButton.classList.add('opacity-0', 'invisible');
+        }
+      });
+      
+      // Scroll to top when button is clicked
+      backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Newsletter form submission
+      const newsletterForm = document.getElementById('newsletter-form');
+      const newsletterSuccessModal = document.getElementById('newsletter-success-modal');
+      const modalContent = document.getElementById('newsletter-modal-content');
+      const modalBackdrop = document.getElementById('newsletter-modal-backdrop');
+      const closeButton = document.getElementById('newsletter-modal-close');
+      const okButton = document.getElementById('newsletter-modal-ok');
+      
+      // Variables to store the trigger element and body's original style
+      let triggerElement = null;
+      let bodyOriginalStyle = '';
+      
+      // Form submission handler
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Store the trigger element and body's original style
+          triggerElement = document.activeElement;
+          bodyOriginalStyle = document.body.style.overflow;
+          
+          // Show modal
+          showModal();
+          
+          // Clear the form
+          newsletterForm.reset();
+        });
+      }
+      
+      // Show modal function
+      function showModal() {
+        // Show modal and prevent body scrolling
+        newsletterSuccessModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // Animate in
+        setTimeout(() => {
+          modalContent.classList.remove('opacity-0', 'scale-95');
+          modalContent.classList.add('opacity-100', 'scale-100');
+        }, 10);
+        
+        // Set ARIA attributes
+        newsletterSuccessModal.setAttribute('aria-hidden', 'false');
+        
+        // Focus the close button
+        closeButton.focus();
+      }
+      
+      // Hide modal function
+      function hideModal() {
+        // Animate out
+        modalContent.classList.remove('opacity-100', 'scale-100');
+        modalContent.classList.add('opacity-0', 'scale-95');
+        
+        // Hide modal and restore body scrolling after animation
+        setTimeout(() => {
+          newsletterSuccessModal.classList.add('hidden');
+          document.body.style.overflow = bodyOriginalStyle;
+          
+          // Set ARIA attributes
+          newsletterSuccessModal.setAttribute('aria-hidden', 'true');
+          
+          // Return focus to the trigger element
+          if (triggerElement) {
+            triggerElement.focus();
+          }
+        }, 300);
+      }
+      
+      // Close modal event listeners
+      if (closeButton) {
+        closeButton.addEventListener('click', hideModal);
+      }
+      
+      if (okButton) {
+        okButton.addEventListener('click', hideModal);
+      }
+      
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', hideModal);
+      }
+      
+      // Close on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !newsletterSuccessModal.classList.contains('hidden')) {
+          hideModal();
+        }
+      });
+      
+      // Trap focus within modal
+      newsletterSuccessModal.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab' && !newsletterSuccessModal.classList.contains('hidden')) {
+          const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+          
+          // If shift+tab on first element, go to last element
+          if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+          // If tab on last element, go to first element
+          else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      });
+    });
+  </script>
+</div>
+
+</element></div>
+      </main>
+
+      <!-- {bodyScripts} -->
+   </body>
+</html>
